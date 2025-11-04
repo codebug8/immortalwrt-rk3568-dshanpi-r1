@@ -222,6 +222,13 @@ define U-Boot/rk3568/Default
   TPL:=$(RK3568_TPL)
 endef
 
+define U-Boot/generic-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=Generic RK3568
+  BUILD_DEVICES:= \
+    100ask_dshanpi-r1
+endef
+
 define U-Boot/bpi-r2-pro-rk3568
   $(U-Boot/rk3568/Default)
   NAME:=Bananapi-R2 Pro
@@ -349,7 +356,8 @@ define U-Boot/generic-rk3576
   $(U-Boot/rk3576/Default)
   NAME:=Generic RK3576
   BUILD_DEVICES:= \
-    friendlyarm_nanopi-r76s
+    friendlyarm_nanopi-r76s \
+    100ask_dshanpi-a1
 endef
 
 define U-Boot/rock-4d-rk3576
@@ -480,6 +488,7 @@ UBOOT_TARGETS := \
   radxa-cm3-io-rk3566 \
   radxa-zero-3-rk3566 \
   rock-3c-rk3566 \
+  generic-rk3568 \
   bpi-r2-pro-rk3568 \
   fastrhino-r66s-rk3568 \
   fastrhino-r68s-rk3568 \

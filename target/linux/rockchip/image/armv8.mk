@@ -133,6 +133,30 @@ define Device/firefly_roc-rk3568-pc
 endef
 TARGET_DEVICES += firefly_roc-rk3568-pc
 
+define Device/100ask_dshanpi-r1
+  $(Device/rk3568)
+  DEVICE_VENDOR := 100ASK
+  DEVICE_MODEL := DShanPi R1
+  DEVICE_ALT0_VENDOR := 100ASK
+  DEVICE_ALT0_MODEL := DShanPi-R1
+  DEVICE_DTS := rk3568-100ask-dshanpi-r1
+  SUPPORTED_DEVICES := 100ask,dshanpi-r1
+  UBOOT_DEVICE_NAME := generic-rk3568
+endef
+TARGET_DEVICES += 100ask_dshanpi-r1
+
+define Device/100ask_dshanpi-a1
+  $(Device/rk3576)
+  DEVICE_VENDOR := 100ASK
+  DEVICE_MODEL := DShanPi A1
+  DEVICE_ALT0_VENDOR := 100ASK
+  DEVICE_ALT0_MODEL := DShanPi-A1
+  DEVICE_DTS := rk3576-100ask-dshanpi-a1
+  SUPPORTED_DEVICES := 100ask,dshanpi-a1
+  UBOOT_DEVICE_NAME := generic-rk3576
+endef
+TARGET_DEVICES += 100ask_dshanpi-a1
+
 define Device/friendlyarm_nanopc-t4
   $(Device/rk3399)
   DEVICE_VENDOR := FriendlyARM
