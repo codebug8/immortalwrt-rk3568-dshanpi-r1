@@ -11,7 +11,7 @@ PKG_HASH:=b4f032848e56cc8f213ad59f9132c084dbbb632bc29176d024e58220e0efdf4a
 
 PKG_MAINTAINER:=Sarah Maedel <openwrt@tbspace.de>
 
-UBOOT_USE_BINMAN:=1
+UBOOT_USE_BINMAN:=0
 UBOOT_USE_INTREE_DTC:=1
 
 include $(INCLUDE_DIR)/u-boot.mk
@@ -222,9 +222,9 @@ define U-Boot/rk3568/Default
   TPL:=$(RK3568_TPL)
 endef
 
-define U-Boot/generic-rk3568
+define U-Boot/dshanpi-r1-rk3568
   $(U-Boot/rk3568/Default)
-  NAME:=Generic RK3568
+  NAME:=DshanPI R1
   BUILD_DEVICES:= \
     100ask_dshanpi-r1
 endef
@@ -488,6 +488,7 @@ UBOOT_TARGETS := \
   radxa-cm3-io-rk3566 \
   radxa-zero-3-rk3566 \
   rock-3c-rk3566 \
+  dshanpi-r1-rk3568 \
   generic-rk3568 \
   bpi-r2-pro-rk3568 \
   fastrhino-r66s-rk3568 \

@@ -141,7 +141,7 @@ define Device/100ask_dshanpi-r1
   DEVICE_ALT0_MODEL := DShanPi-R1
   DEVICE_DTS := rk3568-100ask-dshanpi-r1
   SUPPORTED_DEVICES := 100ask,dshanpi-r1
-  UBOOT_DEVICE_NAME := generic-rk3568
+  UBOOT_DEVICE_NAME := dshanpi-r1-rk3568
 endef
 TARGET_DEVICES += 100ask_dshanpi-r1
 
